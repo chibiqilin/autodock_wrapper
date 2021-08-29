@@ -1,9 +1,6 @@
 # Autodock Vina and Quickdock
 The following README.md describes the process for making use of this autodock vina wrapper. Described below is all the information needed to install the necessary files, prepare the Protein and Ligand files for use, and run the script.
 
-This was developed by referring to:
-https://anonymous.4open.science/r/ReGeM-06E1/
-
 ## Environment and Requirements
 ### Create a conda environment with necessary dependencies and activate it:
 ```
