@@ -207,8 +207,8 @@ The root folder should contain a ./protein_files/, ./ligand_files/, ./output/, t
 >> adock('6rqu','M5C',0.0,0.0,0.0,25,25,25)
 ```
 
-receptor defines the receptor filename
-ligand defines the ligand filename
-center_x/y/z define the starting coordinates to perform docking, place within protein pocket, default parameters of 9.879/-13.774/7.012 were assigned
-size_x/y/z define the size of the box to dock, default parameters of 60/60/60 were assigned
-vina defines the subprocess which will be run, whether it's vina or quickvina, default parameter of 'vina' was assigned
+-receptor defines the receptor filename
+-ligand defines the ligand filename
+-center_x/y/z define the starting coordinates to perform docking, place within protein pocket, default parameters of 9.879/-13.774/7.012 were assigned
+-size_x/y/z define the size of the box to dock, default parameters of 60/60/60 were assigned
+-vina defines the subprocess which will be run, default parameter of 'vina' was assigned
