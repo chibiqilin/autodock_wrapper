@@ -1,0 +1,36 @@
+REMARK  2 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C8_11  and  C9_12 
+REMARK       I    between atoms: C9_12  and  N4_14 
+REMARK    2  A    between atoms: N4_14  and  C10_15 
+ROOT
+HETATM    1  C1  K23 X   1      -0.750   1.437   0.076  1.00 20.00     0.073 C 
+HETATM    2  C2  K23 X   1      -0.598  -0.055   0.126  1.00 20.00     0.066 A 
+HETATM    3  N1  K23 X   1      -0.885  -0.853  -0.885  1.00 20.00    -0.175 NA
+HETATM    4  N2  K23 X   1      -0.620  -2.138  -0.455  1.00 20.00    -0.256 N 
+HETATM    5  C3  K23 X   1      -0.700  -3.254  -1.392  1.00 20.00     0.182 C 
+HETATM    6  C4  K23 X   1      -0.166  -2.134   0.808  1.00 20.00     0.159 A 
+HETATM    7  N3  K23 X   1       0.168  -3.209   1.541  1.00 20.00    -0.234 NA
+HETATM    8  C5  K23 X   1       0.561  -2.954   2.790  1.00 20.00     0.034 A 
+HETATM    9  C6  K23 X   1       0.915  -4.167   3.600  1.00 20.00     0.070 C 
+HETATM   10  C7  K23 X   1       0.647  -1.643   3.342  1.00 20.00     0.044 A 
+HETATM   11  C8  K23 X   1       0.287  -0.552   2.559  1.00 20.00     0.050 A 
+HETATM   12  C15 K23 X   1      -0.130  -0.808   1.247  1.00 20.00     0.053 A 
+ENDROOT
+BRANCH  11  13
+HETATM   13  C9  K23 X   1       0.351   0.934   3.146  1.00 20.00     0.253 C 
+HETATM   14  O1  K23 X   1       0.302   1.902   2.417  1.00 20.00    -0.268 OA
+HETATM   15  N4  K23 X   1       0.458   0.945   4.451  1.00 20.00    -0.351 N 
+HETATM   16  H12 K23 X   1       0.384   0.098   4.939  1.00 20.00     0.163 HD
+BRANCH  15  17
+HETATM   17  C10 K23 X   1       0.682   2.171   5.203  1.00 20.00     0.098 C 
+HETATM   18  C11 K23 X   1      -0.080   2.071   6.530  1.00 20.00     0.027 C 
+HETATM   19  C12 K23 X   1       0.359   0.879   7.388  1.00 20.00     0.017 C 
+HETATM   20  C13 K23 X   1       1.830   0.928   7.802  1.00 20.00     0.140 C 
+HETATM   21  S1  K23 X   1       2.866   1.014   6.340  1.00 20.00     0.146 S 
+HETATM   22  O2  K23 X   1       2.803  -0.211   5.606  1.00 20.00    -0.228 OA
+HETATM   23  C14 K23 X   1       2.189   2.365   5.372  1.00 20.00     0.165 C 
+HETATM   24  O3  K23 X   1       4.232   1.287   6.702  1.00 20.00    -0.228 OA
+ENDBRANCH  15  17
+ENDBRANCH  11  13
+TORSDOF 2

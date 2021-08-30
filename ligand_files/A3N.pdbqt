@@ -1,0 +1,40 @@
+REMARK  3 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N1_2  and  C2_3 
+REMARK    2  A    between atoms: C5_7  and  C6_8 
+REMARK    3  A    between atoms: C6_8  and  N3_9 
+REMARK       I    between atoms: N4_20  and  C15_21 
+ROOT
+HETATM    1  N3  A3N X   1       2.270  -5.112  -1.207  1.00 20.00    -0.066 N 
+HETATM    2  H1  A3N X   1       3.144  -4.674  -1.590  1.00 20.00     0.280 HD
+HETATM    3  C7  A3N X   1       2.461  -6.528  -1.108  1.00 20.00     0.237 C 
+HETATM    4  C8  A3N X   1       3.686  -6.978  -0.346  1.00 20.00     0.055 C 
+HETATM    5  C9  A3N X   1       3.372  -7.164   1.130  1.00 20.00     0.117 C 
+HETATM    6  C10 A3N X   1       3.558  -5.816   1.837  1.00 20.00     0.146 C 
+HETATM    7  C11 A3N X   1       3.460  -4.653   0.853  1.00 20.00     0.061 C 
+HETATM    8  C12 A3N X   1       2.073  -4.614   0.194  1.00 20.00     0.238 C 
+HETATM    9  O1  A3N X   1       4.755  -5.728   2.572  1.00 20.00    -0.382 OA
+HETATM   10  C13 A3N X   1       5.115  -6.795   3.424  1.00 20.00     0.188 C 
+HETATM   11  C14 A3N X   1       5.224  -8.101   2.653  1.00 20.00     0.152 C 
+HETATM   12  N4  A3N X   1       4.149  -8.231   1.708  1.00 20.00    -0.343 N 
+HETATM   13  C15 A3N X   1       4.017  -9.492   1.238  1.00 20.00     0.216 C 
+HETATM   14  C16 A3N X   1       2.898  -9.773   0.254  1.00 20.00     0.117 C 
+HETATM   15  O2  A3N X   1       4.792 -10.401   1.602  1.00 20.00    -0.274 OA
+ENDROOT
+BRANCH   1  16
+HETATM   16  C6  A3N X   1       1.131  -4.754  -2.114  1.00 20.00     0.294 C 
+BRANCH  16  17
+HETATM   17  C5  A3N X   1       0.848  -3.280  -2.132  1.00 20.00     0.081 A 
+HETATM   18  N5  A3N X   1       1.678  -2.541  -2.887  1.00 20.00    -0.066 NA
+HETATM   19  C2  A3N X   1       1.423  -1.232  -2.906  1.00 20.00     0.722 A 
+HETATM   20  N2  A3N X   1       0.447  -0.590  -2.262  1.00 20.00    -0.075 NA
+HETATM   21  C3  A3N X   1      -0.361  -1.360  -1.517  1.00 20.00     0.138 A 
+HETATM   22  C4  A3N X   1      -0.197  -2.727  -1.417  1.00 20.00     0.049 A 
+BRANCH  19  23
+HETATM   23  N1  A3N X   1       2.246  -0.474  -3.662  1.00 20.00    -0.227 N 
+HETATM   24  H7  A3N X   1       2.907  -0.929  -4.223  1.00 20.00     0.177 HD
+HETATM   25  C1  A3N X   1       2.208   0.978  -3.693  1.00 20.00     0.165 C 
+ENDBRANCH  19  23
+ENDBRANCH  16  17
+ENDBRANCH   1  16
+TORSDOF 3

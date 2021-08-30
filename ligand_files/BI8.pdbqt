@@ -1,0 +1,42 @@
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  C11_13 
+REMARK    2  A    between atoms: C2_2  and  C3_3 
+REMARK    3  A    between atoms: C3_3  and  C4_4 
+REMARK    4  A    between atoms: C11_13  and  N1_14 
+REMARK    5  A    between atoms: C14_18  and  C16_20 
+ROOT
+HETATM    1  C1  BI8 X   1      -0.055  -2.600  -0.933  1.00 20.00     0.012 C 
+HETATM    2  C2  BI8 X   1      -0.915  -2.083   0.223  1.00 20.00     0.012 C 
+ENDROOT
+BRANCH   2   3
+HETATM    3  C11 BI8 X   1      -1.369  -0.649   0.004  1.00 20.00     0.239 C 
+BRANCH   3   4
+HETATM    4  N1  BI8 X   1      -2.013  -0.368  -1.321  1.00 20.00    -0.070 N 
+HETATM    5  C17 BI8 X   1      -3.411  -0.935  -1.377  1.00 20.00     0.246 C 
+HETATM    6  C14 BI8 X   1      -4.111  -0.122  -2.450  1.00 20.00     0.008 C 
+HETATM    7  C15 BI8 X   1      -4.053  -0.859  -3.803  1.00 20.00     0.019 C 
+HETATM    8  C13 BI8 X   1      -3.353   1.213  -2.538  1.00 20.00     0.041 C 
+HETATM    9  C12 BI8 X   1      -2.247   1.116  -1.509  1.00 20.00     0.235 C 
+HETATM   10  H2  BI8 X   1      -1.415  -0.758  -2.091  1.00 20.00     0.279 HD
+BRANCH   6  11
+HETATM   11  C16 BI8 X   1      -5.538   0.117  -2.072  1.00 20.00     0.232 C 
+HETATM   12  F1  BI8 X   1      -5.628   0.849  -0.890  1.00 20.00    -0.255 F 
+ENDBRANCH   6  11
+ENDBRANCH   3   4
+ENDBRANCH   2   3
+BRANCH   2  13
+HETATM   13  C3  BI8 X   1      -0.152  -2.205   1.532  1.00 20.00     0.044 C 
+BRANCH  13  14
+HETATM   14  C4  BI8 X   1      -0.815  -1.572   2.726  1.00 20.00    -0.055 A 
+HETATM   15  C5  BI8 X   1      -1.459  -2.384   3.643  1.00 20.00     0.010 A 
+HETATM   16  C6  BI8 X   1      -2.103  -1.822   4.763  1.00 20.00     0.040 A 
+HETATM   17  C7  BI8 X   1      -2.042  -0.466   4.889  1.00 20.00     0.105 A 
+HETATM   18  O1  BI8 X   1      -2.563   0.318   5.884  1.00 20.00    -0.323 OA
+HETATM   19  C9  BI8 X   1      -1.392   0.329   3.965  1.00 20.00     0.105 A 
+HETATM   20  C8  BI8 X   1      -2.228   1.654   5.551  1.00 20.00     0.352 A 
+HETATM   21  O2  BI8 X   1      -1.493   1.643   4.330  1.00 20.00    -0.323 OA
+HETATM   22  C10 BI8 X   1      -0.760  -0.189   2.872  1.00 20.00     0.047 A 
+ENDBRANCH  13  14
+ENDBRANCH   2  13
+TORSDOF 5

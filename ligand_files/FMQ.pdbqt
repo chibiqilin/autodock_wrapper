@@ -1,0 +1,44 @@
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C3_5  and  C4_6 
+REMARK       I    between atoms: C4_6  and  N3_8 
+REMARK    2  A    between atoms: N4_15  and  C11_16 
+REMARK    3  A    between atoms: C11_16  and  C12_17 
+REMARK    4  A    between atoms: C12_17  and  N5_18 
+ROOT
+HETATM    1  C4  FMQ X   1       0.183  -3.354   1.424  1.00 20.00     0.272 C 
+HETATM    2  O1  FMQ X   1       0.201  -3.279   2.658  1.00 20.00    -0.266 OA
+HETATM    3  N3  FMQ X   1      -0.011  -4.537   0.807  1.00 20.00    -0.343 N 
+HETATM    4  C5  FMQ X   1      -0.107  -4.702  -0.650  1.00 20.00     0.162 C 
+HETATM    5  C6  FMQ X   1       0.937  -5.736  -1.105  1.00 20.00     0.241 C 
+HETATM    6  C7  FMQ X   1       2.284  -5.365  -0.442  1.00 20.00     0.040 C 
+HETATM    7  C8  FMQ X   1       2.255  -6.075   0.928  1.00 20.00     0.040 C 
+HETATM    8  C9  FMQ X   1       0.893  -6.807   0.963  1.00 20.00     0.241 C 
+HETATM    9  C10 FMQ X   1      -0.152  -5.821   1.509  1.00 20.00     0.162 C 
+HETATM   10  N4  FMQ X   1       0.569  -7.032  -0.472  1.00 20.00     0.102 N 
+ENDROOT
+BRANCH   1  11
+HETATM   11  C3  FMQ X   1       0.376  -2.137   0.590  1.00 20.00     0.119 A 
+HETATM   12  N2  FMQ X   1      -0.240  -0.956   0.838  1.00 20.00    -0.273 N 
+HETATM   13  N1  FMQ X   1       0.184   0.022  -0.003  1.00 20.00    -0.179 NA
+HETATM   14  H6  FMQ X   1      -0.910  -0.824   1.540  1.00 20.00     0.189 HD
+HETATM   15  C2  FMQ X   1       1.078  -0.573  -0.799  1.00 20.00     0.053 A 
+HETATM   16  C17 FMQ X   1       1.235  -1.924  -0.462  1.00 20.00     0.065 A 
+HETATM   17  C1  FMQ X   1       1.777   0.188  -1.888  1.00 20.00     0.072 C 
+ENDBRANCH   1  11
+BRANCH  10  18
+HETATM   18  C11 FMQ X   1       1.370  -8.143  -1.031  1.00 20.00     0.294 C 
+BRANCH  18  19
+HETATM   19  C12 FMQ X   1       1.030  -9.472  -0.404  1.00 20.00     0.165 C 
+BRANCH  19  20
+HETATM   20  N5  FMQ X   1      -0.422  -9.734  -0.385  1.00 20.00    -0.287 N 
+HETATM   21  C16 FMQ X   1      -1.048 -10.416  -1.351  1.00 20.00     0.226 A 
+HETATM   22  O3  FMQ X   1      -0.513 -10.897  -2.337  1.00 20.00    -0.273 OA
+HETATM   23  C15 FMQ X   1      -2.524 -10.497  -1.028  1.00 20.00     0.112 A 
+HETATM   24  C14 FMQ X   1      -2.644  -9.734   0.307  1.00 20.00     0.112 A 
+HETATM   25  C13 FMQ X   1      -1.222  -9.308   0.601  1.00 20.00     0.226 A 
+HETATM   26  O2  FMQ X   1      -0.862  -8.676   1.581  1.00 20.00    -0.273 OA
+ENDBRANCH  19  20
+ENDBRANCH  18  19
+ENDBRANCH  10  18
+TORSDOF 4

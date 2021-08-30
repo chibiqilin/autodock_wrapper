@@ -135,12 +135,15 @@ $ mkdir ./ligand_files/
 $ cp /home/usr/dir/{foo.mol2,bar.pdb} ./ligand_files/
 ```
 
-##### Run the autodock python script on all files in the folder with the .mol2 or .pdb extension
+##### Run the autodocktools python script on all files in the folder with the .mol2 or .pdb extension
 ```
-$ find ./ligand_files/ -name "*.mol2" -o -name "*.pdb" | xargs -r -n 1 python /usr/lib/python2.7/dist-packages/AutoDockTools/Utilities24/prepare_ligand4.py
+$ source deactivate
+$ find ./ligand_files/ -name "*.mol2" -o -name "*.pdb" | xargs -r -n 1 python2.7 /usr/lib/python2.7/dist-packages/AutoDockTools/Utilities24/prepare_ligand4.py
 ```
 
+Autodocktools rely on python2.7, so make sure to deactivate the source before preparing your ligand files.
 This will convert all files ending in ".mol2" or ".pdb" into ".pdbqt" format required. With this, ligand prep is complete.
+
 #### Alternatively, generate pdbqt from smiles using obabel
 ##### Convert $SMI using $NAME to $NAME.pdbqt
 ```
@@ -176,15 +179,17 @@ Alternatively, I can wrap this in python to be called there, but for my workflow
 ├── protein_files
 │   ├── 6rqu.pdbqt
 ├── ligand_files
-│   ├── ZINC000000000001.pdbqt
-│   ├── ZINC000000000002.pdbqt
-│   ├── ZINC000000000003.pdbqt
-│   ├── *.pdbqt
+│   ├── A1J.pdbqt
+│   ├── ...
 ├── output
-│   ├── ZINC000000000001_out.pdbqt
-│   ├── ZINC000000000002_out.pdbqt
-│   ├── ZINC000000000003_out.pdbqt
-│   ├── *_out.pdbqt
+│   ├── A1J_out.pdbqt
+│   ├── ...
+├── config
+│   ├── A1J.conf
+│   ├── ...
+├── log
+│   ├── A1J_log.txt
+│   ├── ...
 ├── ...
 ├── *.py
 └── README.md
@@ -192,22 +197,18 @@ Alternatively, I can wrap this in python to be called there, but for my workflow
 
 The root folder should contain a ./protein_files/, ./ligand_files/, ./output/, the python scripts and this README.md.
 
-### Run the script, or encorporate it
+### Import and run
 ```
-python dock_vina.py \
--receptor 6rqu \
--ligand ZINC000000000001 \
--center_x 9.879 \
--center_y -13.774 \
--center_z 7.012 \
--size_x 60 \
--size_y 60 \
--size_z 60 \
-'vina'
+>> from advina import adock
+```
+
+```
+>> adock('6rqu','A1J')
+>> adock('6rqu','M5C',0.0,0.0,0.0,25,25,25)
 ```
 
 receptor defines the receptor filename
 ligand defines the ligand filename
-center_x/y/z define the starting coordinates to perform docking, place within protein pocket
-size_x/y/z define the size of the box to dock
-vina defines the subprocess which will be run, whether it's vina or quickvina
+center_x/y/z define the starting coordinates to perform docking, place within protein pocket, default parameters of 9.879/-13.774/7.012 were assigned
+size_x/y/z define the size of the box to dock, default parameters of 60/60/60 were assigned
+vina defines the subprocess which will be run, whether it's vina or quickvina, default parameter of 'vina' was assigned

@@ -1,0 +1,48 @@
+REMARK  6 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_2  and  O1_3 
+REMARK    2  A    between atoms: O1_3  and  C3_4 
+REMARK    3  A    between atoms: C3_4  and  C4_6 
+REMARK    4  A    between atoms: C7_9  and  S1_10 
+REMARK    5  A    between atoms: S1_10  and  N1_13 
+REMARK    6  A    between atoms: C10_16  and  N2_17 
+ROOT
+HETATM    1  S1  NRV X   1       3.560  -4.106  -6.374  1.00 20.00     0.260 S 
+HETATM    2  O3  NRV X   1       3.199  -5.374  -6.929  1.00 20.00    -0.200 OA
+HETATM    3  O4  NRV X   1       3.484  -2.927  -7.181  1.00 20.00    -0.200 OA
+ENDROOT
+BRANCH   1   4
+HETATM    4  C7  NRV X   1       2.564  -3.843  -4.946  1.00 20.00     0.079 A 
+HETATM    5  C14 NRV X   1       2.131  -4.921  -4.197  1.00 20.00     0.026 A 
+HETATM    6  C15 NRV X   1       1.352  -4.713  -3.069  1.00 20.00     0.019 A 
+HETATM    7  C4  NRV X   1       1.004  -3.429  -2.696  1.00 20.00     0.039 A 
+HETATM    8  C5  NRV X   1       1.439  -2.347  -3.447  1.00 20.00     0.019 A 
+HETATM    9  C6  NRV X   1       2.216  -2.554  -4.571  1.00 20.00     0.026 A 
+BRANCH   7  10
+HETATM   10  C3  NRV X   1       0.254  -3.248  -1.417  1.00 20.00     0.293 C 
+HETATM   11  O2  NRV X   1       0.005  -2.180  -0.920  1.00 20.00    -0.259 OA
+BRANCH  10  12
+HETATM   12  O1  NRV X   1      -0.182  -4.416  -0.945  1.00 20.00    -0.318 OA
+BRANCH  12  13
+HETATM   13  C2  NRV X   1      -0.958  -4.387   0.263  1.00 20.00     0.174 C 
+HETATM   14  C1  NRV X   1      -1.586  -5.664   0.561  1.00 20.00     0.034 C 
+ENDBRANCH  12  13
+ENDBRANCH  10  12
+ENDBRANCH   7  10
+ENDBRANCH   1   4
+BRANCH   1  15
+HETATM   15  N1  NRV X   1       5.105  -4.238  -5.879  1.00 20.00    -0.306 N 
+HETATM   16  C8  NRV X   1       6.079  -3.148  -6.014  1.00 20.00     0.137 C 
+HETATM   17  C9  NRV X   1       7.294  -3.621  -6.800  1.00 20.00     0.053 C 
+HETATM   18  C10 NRV X   1       7.894  -4.882  -6.191  1.00 20.00     0.190 C 
+HETATM   19  C11 NRV X   1       6.833  -5.958  -6.053  1.00 20.00     0.030 C 
+HETATM   20  C12 NRV X   1       7.434  -7.157  -5.338  1.00 20.00     0.014 C 
+HETATM   21  C13 NRV X   1       5.640  -5.455  -5.261  1.00 20.00     0.141 C 
+BRANCH  18  22
+HETATM   22  N2  NRV X   1       8.995  -5.383  -7.078  1.00 20.00    -0.075 N 
+HETATM   23  H2  NRV X   1       9.507  -6.162  -6.594  1.00 20.00     0.274 HD
+HETATM   24  H4  NRV X   1       8.585  -5.739  -7.977  1.00 20.00     0.274 HD
+HETATM   25  H3  NRV X   1       9.663  -4.599  -7.283  1.00 20.00     0.274 HD
+ENDBRANCH  18  22
+ENDBRANCH   1  15
+TORSDOF 6

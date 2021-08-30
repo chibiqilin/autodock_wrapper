@@ -1,0 +1,47 @@
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C2_3  and  C3_4 
+REMARK    2  A    between atoms: C3_4  and  N2_5 
+REMARK    3  A    between atoms: N2_5  and  S1_10 
+REMARK    4  A    between atoms: N2_5  and  C4_6 
+REMARK    5  A    between atoms: C4_6  and  C5_7 
+REMARK    6  A    between atoms: S1_10  and  C7_13 
+REMARK    7  A    between atoms: C7_13  and  C8_14 
+ROOT
+HETATM    1  N1  BPE X   1      -0.684   5.336   4.347  1.00 20.00    -0.197 NA
+HETATM    2  C1  BPE X   1      -1.077   4.643   3.536  1.00 20.00     0.060 C 
+HETATM    3  C2  BPE X   1      -1.598   3.804   2.460  1.00 20.00     0.144 C 
+ENDROOT
+BRANCH   3   4
+HETATM    4  C3  BPE X   1      -0.923   4.003   1.113  1.00 20.00     0.149 C 
+BRANCH   4   5
+HETATM    5  N2  BPE X   1      -1.539   3.203   0.053  1.00 20.00    -0.309 N 
+BRANCH   5   6
+HETATM    6  S1  BPE X   1      -1.831   4.028  -1.349  1.00 20.00     0.232 S 
+HETATM    7  O1  BPE X   1      -2.390   3.054  -2.234  1.00 20.00    -0.205 OA
+HETATM    8  O2  BPE X   1      -2.586   5.205  -1.048  1.00 20.00    -0.205 OA
+BRANCH   6   9
+HETATM    9  C7  BPE X   1      -0.219   4.508  -1.946  1.00 20.00     0.206 C 
+BRANCH   9  10
+HETATM   10  C8  BPE X   1      -0.264   5.268  -3.251  1.00 20.00     0.018 A 
+HETATM   11  C13 BPE X   1      -0.229   4.579  -4.454  1.00 20.00     0.044 A 
+HETATM   12 CL1  BPE X   1      -0.140   2.852  -4.460  1.00 20.00    -0.084 Cl
+HETATM   13  C12 BPE X   1      -0.265   5.274  -5.649  1.00 20.00     0.024 A 
+HETATM   14  C11 BPE X   1      -0.342   6.658  -5.644  1.00 20.00     0.005 A 
+HETATM   15  C10 BPE X   1      -0.377   7.344  -4.445  1.00 20.00     0.043 A 
+HETATM   16  C9  BPE X   1      -0.341   6.647  -3.247  1.00 20.00     0.125 A 
+HETATM   17  F1  BPE X   1      -0.381   7.316  -2.078  1.00 20.00    -0.205 F 
+ENDBRANCH   9  10
+ENDBRANCH   6   9
+ENDBRANCH   5   6
+BRANCH   5  18
+HETATM   18  C4  BPE X   1      -0.956   1.870  -0.091  1.00 20.00     0.149 C 
+BRANCH  18  19
+HETATM   19  C5  BPE X   1      -1.492   0.841   0.874  1.00 20.00     0.144 C 
+HETATM   20  C6  BPE X   1      -2.914   0.546   0.727  1.00 20.00     0.060 C 
+HETATM   21  N3  BPE X   1      -4.020   0.288   0.654  1.00 20.00    -0.197 NA
+ENDBRANCH  18  19
+ENDBRANCH   5  18
+ENDBRANCH   4   5
+ENDBRANCH   3   4
+TORSDOF 7
