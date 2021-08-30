@@ -7,7 +7,7 @@ The following README.md describes the process for making use of this autodock vi
 $ conda create -n advina -c conda-forge -c python=3.7 openbabel=2.4.1 rdkit=2020.03 numpy psutil joblib
 $ conda activate advina
 ```
-### Install AutoDock Vina
+### Install AutoDock Vina and QuickVina
 #### Debian/Ubuntu:
 ##### Install with apt:
 ```
@@ -50,6 +50,18 @@ $ ./autodock_vina_1_1_2_linux_x86/bin/vina --help
 ##### Optionally move binaries or add autodock_vina_1_1_2_linux_x86/bin/ to $PATH and run with:
 ```
 $ vina --help
+```
+
+#### Download QuickVina Binaries:
+##### Download binaries
+Located at:
+https://qvina.github.io/
+
+##### Set permissions, run and optionally add to path or local bin
+```
+$ chmod u+x qvina2.1
+$ qvina2.1 --help
+$ cp qvina2.1 ~/.local/bin/
 ```
 
 ## Protein and Ligand prep
@@ -205,6 +217,7 @@ The root folder should contain a ./protein_files/, ./ligand_files/, ./output/, t
 ```
 >> adock('6rqu','A1J')
 >> adock('6rqu','M5C',0.0,0.0,0.0,25,25,25)
+>> adock('6rqu','CZ0',vina='qvina2.1')
 ```
 
 -receptor defines the receptor filename
