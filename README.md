@@ -225,3 +225,5 @@ The root folder should contain a ./protein_files/, ./ligand_files/, ./output/, t
 -center_x/y/z define the starting coordinates to perform docking, place within protein pocket, default parameters of 9.879/-13.774/7.012 were assigned
 -size_x/y/z define the size of the box to dock, default parameters of 60/60/60 were assigned
 -vina defines the subprocess which will be run, default parameter of 'vina' was assigned
+-seed defines the seed to use for random number generation, default of None
+-cpu defines the number of cpu cores, default of 1
