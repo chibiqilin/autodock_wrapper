@@ -6,7 +6,9 @@ def adock(receptor_name,
         size_x=60,
         size_y=60,
         size_z=60,
-        vina='vina'):
+        vina='vina'
+        seed=None
+        cpu=1):
 
     #Imports
     import os
@@ -40,7 +42,9 @@ def adock(receptor_name,
                     'size_x = ' + str(size_x) + '\n' + \
                     'size_y = ' + str(size_y) + '\n' + \
                     'size_z = ' + str(size_z) + '\n' + \
-                    'out = ' + output
+                    'out = ' + output + '\n' + \
+                    'seed = ' + str(seed) + '\n' + \
+                    'cpu = ' + str(cpu)
             
             #mkdir for output, conf files and logs
             os.makedirs(out_dir, exist_ok=True)
