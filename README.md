@@ -134,73 +134,21 @@ Grid > Macromolecule > Choose > Select the protein, e.g. 6rqu > Select Molecule 
 
 With this, protein prep is complete.
 
-### Ligand Prep
-Ligand prep can be done without the GUI making use of the compiled python script "prepare_ligand4.py".
-If installed from repository, you can find it in your /usr/lib/python2.7/dist-packages/AutoDockTools/Utilities24/ folder.
-
-This is assuming you already have mol2 or pdb ligand files with conformers generated. Alternatively, ligand pdbqt files can also be generated from smiles using obabel, more details below.
-
-#### Convert mol2 or pdb to pdbqt
-##### Make a folder and copy any .mol2 or .pdb to be converted
-```
-$ mkdir ./ligand_files/
-$ cp /home/usr/dir/{foo.mol2,bar.pdb} ./ligand_files/
-```
-
-##### Run the autodocktools python script on all files in the folder with the .mol2 or .pdb extension
-```
-$ source deactivate
-$ find ./ligand_files/ -name "*.mol2" -o -name "*.pdb" | xargs -r -n 1 python2.7 /usr/lib/python2.7/dist-packages/AutoDockTools/Utilities24/prepare_ligand4.py
-```
-
-Autodocktools rely on python2.7, so make sure to deactivate the source before preparing your ligand files.
-This will convert all files ending in ".mol2" or ".pdb" into ".pdbqt" format required. With this, ligand prep is complete.
-
-#### Alternatively, generate pdbqt from smiles using obabel
-##### Convert $SMI using $NAME to $NAME.pdbqt
-```
-$ obabel -:"$SMI" -O ./ligand_files/$NAME.pdbqt -h --gen3d > /dev/null 2>&1
-```
-
-This will run obabel using the SMILES $SMI as input, $NAME.pdbqt as output, -h to add hydrogens, --gen3d to create a 3d model and silence the program errors by redirecting output to /dev/null.
-
-Example use given tranche file CAAAML.smi downloaded from leadlike zinc15 database:
-```
-smiles zinc_id
-0=C{[O...	ZINC000019364242
-...
-```
-
-You can iterate through each file in the list using:
-```
-$ dos2unix CAAAML.smi
-$ sed 1d CAAAML.smi | while IFS= read -r SMILES NAME
-	do
-		obabel -:"$SMI" -O ./ligand_files/$NAME.pdbqt -h --gen3d > /dev/null 2>&1
-	done
-```
-
-Note that the first line used is to convert the tranche file's EOL line ending from dos format to unix.
-This will skip the first line (header) of the file, read through each subsequent line of the file and assign the first column as $SMILES and second column as $NAME, and use babel to convert the smiles into a 3d pdbqt file.
-
-#### Note
-Alternatively, I can wrap this in python to be called there, but for my workflow I found it easier to prep the protein/ligand files beforehand in bash. Please let me know if there's any changes you'd like to see.
-
 ### Establish Folder Layout
 ```
 ├── protein_files
 │   ├── 6rqu.pdbqt
 ├── ligand_files
-│   ├── A1J.pdbqt
+│   ├── ZINC000019364242.pdbqt
 │   ├── ...
 ├── output
-│   ├── A1J_out.pdbqt
+│   ├── ZINC000019364242_out.pdbqt
 │   ├── ...
 ├── config
-│   ├── A1J.conf
+│   ├── ZINC000019364242.conf
 │   ├── ...
 ├── log
-│   ├── A1J_log.txt
+│   ├── ZINC000019364242_log.txt
 │   ├── ...
 ├── ...
 ├── *.py
@@ -213,17 +161,41 @@ The root folder should contain a ./protein_files/, ./ligand_files/, ./output/, t
 ```
 >> from advina import adock
 ```
-
+Example input:
 ```
->> adock('6rqu','A1J')
->> adock('6rqu','M5C',0.0,0.0,0.0,25,25,25)
->> adock('6rqu','CZ0',vina='qvina2.1')
+>> adock('./protein_files/6rqu.pdbqt','O=C([O-])CN(CCN(CC(=O)[O-])CC(=O)[O-])CC(=O)[O-]','ZINC000019364242')
+>> adock('./protein_files/6rqu.pdbqt','O=C([O-])CN(CCN(CC(=O)[O-])CC(=O)[O-])CC(=O)[O-]','ZINC000019364242',0.0,0.0,0.0,25,25,25)
+>> adock('./protein_files/6rqu.pdbqt','O=C([O-])CN(CCN(CC(=O)[O-])CC(=O)[O-])CC(=O)[O-]','ZINC000019364242',vina='qvina2.1')
 ```
 
--receptor defines the receptor filename
--ligand defines the ligand filename
--center_x/y/z define the starting coordinates to perform docking, place within protein pocket, default parameters of 9.879/-13.774/7.012 were assigned
--size_x/y/z define the size of the box to dock, default parameters of 60/60/60 were assigned
--vina defines the subprocess which will be run, default parameter of 'vina' was assigned
--seed defines the seed to use for random number generation, default of None
--cpu defines the number of cpu cores, default of 1
+Input parameters are as follows:
+```
+adock(receptor_input,
+        smiles,
+        ligand_name,
+        center_x=9.879,
+        center_y=-13.774,
+        center_z=7.012,
+        size_x=60,
+        size_y=60,
+        size_z=60,
+        vina='vina',
+        seed=None,
+        cpu=1,
+        lig_dir = './ligand_files/',
+        out_dir = './output/',
+        log_dir = './log/',
+        conf_dir = './config/'):
+```
+-receptor_input defines input file path for the target protein (required)
+-smiles defines the 2d smiles structure (required)
+-ligand_name defines the output filename for a given ligand input (required)
+-center_x/y/z defines the starting coordinates (default X: 9.879, Y: -13.774, Z: 7.012)
+-size_x/y/z defines the search space around the starting coordinates (default X: 60, Y: 60, Z: 60)
+-vina defines the software being used called through bash, either the executable on $PATH or the full path to the executable location (default provided)
+-seed defines the seed used for random generation, (default: None)
+-cpu defines the number of cpus (default: 1)
+-lig_dir defines directory for generated ligand .pdbqt files
+-out_dir defines output directory for generated results
+-log_dir defines directory for docking logs
+-conf_dir defines directory for configuration used for a given ligand file
