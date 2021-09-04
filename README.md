@@ -188,14 +188,25 @@ adock(receptor_input,
         conf_dir = './config/'):
 ```
 -receptor_input defines input file path for the target protein (required)
+
 -smiles defines the 2d smiles structure (required)
+
 -ligand_name defines the output filename for a given ligand input (required)
+
 -center_x/y/z defines the starting coordinates (default X: 9.879, Y: -13.774, Z: 7.012)
+
 -size_x/y/z defines the search space around the starting coordinates (default X: 60, Y: 60, Z: 60)
+
 -vina defines the software being used called through bash, either the executable on $PATH or the full path to the executable location (default provided)
+
 -seed defines the seed used for random generation, (default: None)
+
 -cpu defines the number of cpus (default: 1)
+
 -lig_dir defines directory for generated ligand .pdbqt files
+
 -out_dir defines output directory for generated results
+
 -log_dir defines directory for docking logs
+
 -conf_dir defines directory for configuration used for a given ligand file
